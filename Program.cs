@@ -109,7 +109,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AngularPolicy", policy =>
     {
         policy
-            .WithOrigins("http://localhost:4200")
+            .WithOrigins("https://rcmfrontend.vercel.app/login")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
