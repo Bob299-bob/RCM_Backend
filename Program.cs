@@ -119,12 +119,9 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // 9. Swagger UI
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+// 9. Swagger UI - Enabled in Production and Development
+app.UseSwagger();
+app.UseSwaggerUI();
 // 10. Middleware Configuration
 app.UseHttpsRedirection();
 
